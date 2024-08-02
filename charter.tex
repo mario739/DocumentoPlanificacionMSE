@@ -29,7 +29,7 @@ codirector, % Uncomment to add a codirector to the title page
  
 \fechaINICIO{22 de junio de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{17 de Agosto de 2024} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{15 de mayo de 2025}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -58,7 +58,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                & {2} de {agosto} de 2024 \\ \hline
+1      & Se completa hasta el punto 9 inclusive                & {2} de {agosto} de 2024 \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -109,10 +109,10 @@ En los últimos años la tendencia tecnológica se ha orientado hacia la creaci�
 
 Cossalt RL es una cooperativa que da el servicio de agua a la ciudad de Tarija. Actualmente la cooperativa consta de 50 sistemas de bombeo de agua de pozos distribuidos por toda la ciudad para poder suministrar agua potable a las personas de cada zona. La mayoría de los sistemas son manuales esto quiere decir que hay un operario que se encarga de prender y apagar las bombas de agua dependiendo el nivel del agua en los tanques de almacenamiento todo de forma manual.
 
-El objetivo principal del proyecto es la creación de un sistema capaz de realizar mediaciones de consumo eléctrico de las bombas, presión del agua en las tuberías, nivel del tanque de almacenamiento y enviar los datos obtenidos a una plataforma IoT haciendo uso de un módulo de comunicación GSM/GPRS. La plataforma permitirá almacenar los datos y crear paneles de visualización. También se mostrarán los datos obtenidos en un display ubicado en el panel de control. 
+El objetivo principal del proyecto es la creación de un sistema capaz de realizar mediaciones de consumo eléctrico de las bombas, presión del agua en las tuberías, nivel del tanque de almacenamiento y enviar los datos obtenidos a una plataforma IoT haciendo uso de un módulo de comunicación GSM/GPRS. El sistema también controlara el encendido y apagado de las bombas de forma automática dependiendo las lecturas de los sensores. La plataforma IoT permitirá almacenar los datos, crear paneles de visualización y controlar actuadores. También se mostrarán los datos obtenidos en un display ubicado en el panel de control.
 En la figura \ref{fig:diagra_sistema} se puede observar el diagrama de bloques del sistema.
 
-El proyecto permitirá al cliente disminuir el desperdicio de agua que ocurre al momento de bombear agua desde los pozos profundos a los tanques de almacenamiento, también ayudará a detectar de forma temprana posibles rupturas en las tuberías. También tendrá un monitoreo y control del encendido y apagado de las bombas ahorrando energía eléctrica.
+El proyecto permitirá al cliente disminuir el desperdicio de agua que ocurre al momento de bombear agua desde los pozos profundos a los tanques de almacenamiento, también ayudará a detectar de forma temprana posibles rupturas en las tuberías. Al tener un monitoreo y control del encendido y apagado de las bombas se disminuira el consumo eléctrica.
 
 \begin{figure}[hpb]
 	\centering 
@@ -142,7 +142,7 @@ Usuario final & Operarios         & COSAALT RL            	& -      	\\ \hline
 \end{table}
 
 \begin{itemize}
-	\item Orientador: El Mg. Ing. Mauricio Barroso Benavides tiene mucha experiencia en el desarrollo de proyectos IoT, sera una guia para el desarrollo del firmware y del hardware del embebido. Es exigente con los tiempos y la
+	\item Orientador: El Mg. Ing. Mauricio Barroso Benavides tiene mucha experiencia en el desarrollo de proyectos IoT, será una guía para el desarrollo del firmware y del hardware del embebido. Es exigente con los tiempos y la
 	calidad del desarrollo del proyecto.
 \end{itemize}
 
@@ -156,7 +156,7 @@ El propósito del proyecto es desarrollar un sistema que sea capaz de monitorear
 \label{sec:alcance}
 El proyecto incluye:
 \begin{itemize}
-	\item Diseño e implementación del PCB prototipo, esto incluye todas las etapas desde el diseño de los esquematicos hasta el envio para la fabricacion y ensamblaje y finalmente las pruebas preliminares de funcionamiento.
+	\item Diseño e implementación del PCB, esto incluye todas las etapas desde el diseño de los esquemáticos hasta el envío para la fabricación y ensamblaje, finalmente las pruebas preliminares de funcionamiento.
 	\item Desarrollo del firmware del microcontrolador basado en un sistema operativo de tiempo real.
 	\item Configuración de la plataforma IoT para la visualizacion, almacenamiento, gestion de alarmas.
 \end{itemize}
@@ -171,11 +171,12 @@ El proyecto no incluye:
 
 \begin{itemize}
 	\item El tiempo de fabricación y ensamblaje de los PCBs de prueba estará dentro de lo planeado.
-	\item El tiempo de importación de los módulos y componentes estarán dentron del tiempo esperado.
+	\item El tiempo de importación de los módulos y componentes estarán dentro del tiempo esperado.
 	\item El presupuesto no superará en gran medida lo estimado.
 	\item No tener problemas de importación de los componentes.
-	\item El tiempo disponible para la dedicacion del proyecto sera el adecuado para cumplir con
-	los objetivos. 
+	\item El tiempo disponible para la dedicación del proyecto será el adecuado para cumplir con
+	los objetivos.
+ 
 \end{itemize}
 
 \section{6. Requerimientos}
@@ -186,25 +187,24 @@ El proyecto no incluye:
 			\item Requerimientos de firmware
 			\begin{enumerate} 
 				\item El firmware debe estar bajo un RTOS.
-				\item Se debera llevar control de los cambios bajo el sistema de control de versiones Git.
-				\item El firmware debe poder suscribirse y publicar en topicos de un broker MQTT.
-				\item El firmware debe comunicarse con el modulo GSM/GPRS mediante protocolo serial.
+				\item Se deberá llevar control de los cambios bajo el sistema de control de versiones Git.
+				\item El firmware debe poder suscribirse y publicar en tópicos de un broker MQTT.
+				\item El firmware debe comunicarse con el módulo GSM/GPRS mediante protocolo serial.
 				\item El firmware debe poder obtener las lecturas de los sensores.
 				\item El firmware debe poder actualizarse de forma remota.
 				\item Se deben realizar los drivers para los sensores.
 				\item Se debe hacer test unitarios para los drivers.
-				\item Se debe hacer test de integracion.
 			\end{enumerate}
 			\item Requerimientos de hardware
 			\begin{enumerate} 
-				\item El PCB tiene que tener puerto de entrada para RS485.
-				\item El PCB tiene que tener una entrada de 4-20mA.
-				\item El PCB tiene que tener una entrada de 0-10V.
+				\item El PCB tiene que tener un circuito de acondicionamiento para una entrada RS485.
+				\item El PCB tiene que tener un circuito de acondicionamiento para una entrada de 4-20mA.
+				\item El PCB tiene que tener un circuito de acondicionamiento para una entrada de 0-10V.
 				\item Debe contar con una display.
 			\end{enumerate}			
 			\item Requerimientos de interfaz gráfica
 			\begin{enumerate} 
-				\item El usuario debe poder ver Debe mostrar los valores de los sensores.
+				\item Debe mostrar los valores de los sensores.
 				\item Debe mostrar el estado de los actuadores.
 				\item Debe contar con botones para controlar la actuadores.
 				\item Debe almacenar los datos.
@@ -213,7 +213,7 @@ El proyecto no incluye:
 			\item Requerimientos de documentación
 			\begin{enumerate} 
 				\item Se debe presentar un informe de avance del proyecto.
-				\item Se debe presentar una memoria tecnica al final del proyecto.
+				\item Se debe presentar una memoria técnica al final del proyecto.
 			\end{enumerate}
 		\end{enumerate}
 
@@ -248,20 +248,21 @@ Historia de usuario 1:``Como operador quiero ver en una pantalla local las lectu
 \begin{itemize}
 	\item Dificultad: medio(3) 
 	\item Complejidad: medio(3)
-	\item Riesgo: medio(3)  
+	\item Riesgo: bajo(1)  
+\end{itemize}
+Story point=(3+3+1)=7
+
+Historia de usuario 2:``Como operador quiero recibir alertas cuando sobrepase algún umbral en la lectura de los sensores``
+\begin{itemize}
+	\item Dificultad: medio(3) 
+	\item Complejidad: alto(3)
+	\item Riesgo: medio(3)
 \end{itemize}
 Story point=(3+3+3)=9
 
-Historia de usuario 2:``Como operador quiero resibir alarmas cuando se rompa alguna regla de configuracion como nivel de tanque de agua sobrepasado``
-\begin{itemize}
-	\item Dificultad: medio(3) 
-	\item Complejidad: alto(5)
-	\item Riesgo: medio(1)
-\end{itemize}
-Story point=(3+5+1)=9
-
-Historia de usuario 1:``Como operador quiero poder visualizar la informacion que genera el sistema en un dashboard
-que pueda ser accedido mediante internet.``
+Historia de usuario 1:``Como operador quiero poder visualizar la información que genera el sistema en un dashboard
+que pueda ser accedido mediante internet
+``
 \begin{itemize}
 	\item Dificultad: medio(3) 
 	\item Complejidad: medio(3)
@@ -273,7 +274,7 @@ Story point=(3+3+1)=7
 \label{sec:entregables}
 
 \begin{itemize}
-	\item Documentación en formato pdf de los esquematicos y planos del PCB.
+	\item Documentación en formato pdf de los esquemáticos y planos del PCB.
 	\item Código fuente del firmware no editable.
 	\item Prototipo funcional.
 	\item Documentación del proyecto.
@@ -283,55 +284,54 @@ Story point=(3+3+1)=7
 \label{sec:wbs}
 
 \begin{enumerate}
-\item documentación del proyecto(80 hs)
+\item Documentación del proyecto(80 hs)
 	\begin{enumerate}
-	\item Esbribir la planificacion del proyecto(60 hs)
-	\item Especificacion de requisitos del firmware(10 hs)
-	\item Definicion de las pruebas de aceptacion(10 hs)
+	\item Escribir la planificación del proyecto(60 hs)
+	\item Especificación de requisitos del firmware(10 hs)
+	\item Definición de las pruebas de aceptación(10 hs)
 	\end{enumerate}
-\item Busqueda de material bibliografico (45 hs)
+\item Búsqueda de material bibliográfico  (45 hs)
 	\begin{enumerate}
 	\item Buscar hojas de datos de todos los componentes (15 hs)
-	\item Estudiar como funciona cada uno de los componentes (15 hs)
+	\item Estudiar el funcionamiento de cada uno de los componentes (15 hs)
 	\item Investigar sobre dispositivos con funciones similares (15 hs)
 	\end{enumerate}
 \item Diseño del hardware del sistema (160 hs)
 	\begin{enumerate}
-	\item Seleccion de componentes(15 hs)
-	\item Diseño del esquematico(60 hs)
-	\item Diseño de los simbolos(20 hs)
+	\item Selección de componentes(15 hs)
+	\item Diseño del esquemático(60 hs)
+	\item Diseño de los símbolos(20 hs)
 	\item Diseño del PCB(60 hs)
-	\item Diseño de los componetes en 3D(5 hs)
+	\item Diseño de los componentes en 3D(5 hs)
 	\end{enumerate}
-\item Desarrollo del firmware(175)
+\item Desarrollo del firmware(170)
 	\begin{enumerate}
-	\item Diseño de la arquitectura del firmware(20 hs)
+	\item Diseño de la arquitectura del firmware(25 hs)
 	\item Desarrollo de los drivers del firmware(70 hs)
 	\begin{enumerate}
-		\item Desarrollo driver para el sensor de presion(20 hs)
+		\item Desarrollo driver para el sensor de presión(20 hs)
 		\item Desarrollo del driver para el sensor de nivel(20 hs)
 		\item Desarrollo del driver para el macromedidor(10 hs)
-		\item Desarrollo del driver para el medidor de energia(20 hs)
+		\item Desarrollo del driver para el medidor de energía(20 hs)
 	\end{enumerate}
-	\item Montar el sistema operativo(5 hs).
-	\item Desarrollar el modulo de la aplicación(80 hs).
+	\item Desarrollar el módulo de la aplicación(80 hs).
 	\end{enumerate}
-\item Configuracion de la interfaz grafica(70 hs)	
+\item Configuración de la interfaz gráfica(70 hs)
     \begin{enumerate}
-		\item Diseño de la interfaz grafia en la plataforma IoT(40 hs)
-		\item Configuracion de la base de datos,alarmas y reglas(30 hs)
+		\item Diseño de la interfaz gráfica en la plataforma IoT(40 hs)
+		\item Configuración de la base de datos, alarmas y reglas(30 hs)
 	\end{enumerate}
 \item Testing(30 hs)	
     \begin{enumerate}
-		\item Testeo electrico del PCB(10 hs)
+		\item Testeo eléctrico del PCB(10 hs)
 		\item Testeo del firmware(10 hs)
-		\item Depuracion del firmware(10 hs)
+		\item Depuración del firmware(10 hs)
 	\end{enumerate}
 \item Cierre del proyecto(120 hs)	
     \begin{enumerate}
 		\item Informes de avance del proyecto(20 hs)
-		\item Elaboracion de la memoria tecnica del trabajo final(80 hs)
-		\item Presentacion final del proyecto(20 hs)
+		\item Elaboración de la memoria técnica del trabajo final(80 hs)
+		\item Presentación final del proyecto(20 hs)
 	\end{enumerate}
 
 
@@ -470,15 +470,15 @@ Descripción &
   \multicolumn{1}{c|}{1}&
   \multicolumn{1}{c|}{150} &
   \multicolumn{1}{c|}{150} \\ \hline
- Modulo de comunicación GSM/GPRS&
+Módulo de comunicación GSM/GPRS&
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{350} &
   \multicolumn{1}{c|}{350} \\ \hline
- Componentes electronicos del PCB&
+Componentes electrónicos para el PCB&
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{400} &
   \multicolumn{1}{c|}{400} \\ \hline 
- Fabricación y emsamblaje del PCB&
+Fabricación y emsamblaje del PCB&
   \multicolumn{1}{c|}{5} &
   \multicolumn{1}{c|}{50} &
   \multicolumn{1}{c|}{250} \\ \hline 
@@ -495,8 +495,8 @@ Horas de ingenieria &
   \multicolumn{1}{c|}{50} &
   \multicolumn{1}{c|}{34000} \\ \hline  
 
-\multicolumn{3}{|c|}{SUBTOTAL}    35660&
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL}   &
+  \multicolumn{1}{c|}{35660} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -504,20 +504,12 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{30 porciento de los costos directos} &
+\multicolumn{1}{|l|}{30 \% de los costos directos} &
    1&
    1&10698
    \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} 10698&
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} &
+  \multicolumn{1}{|c|}{10698} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &46358
    \\ \hline
@@ -527,9 +519,41 @@ Descripción &
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+a) Identificación de los riesgos y estimación de sus consecuencias:
 
-Riesgo 1: Demora para conseguir los modulos y componentes electronicos requeridos.
+Riesgo 1: Detección de errores en el esquemático o el ruteo del PCB ya habiendo fabricado los prototipos.
+\begin{itemize}
+	\item Severidad (7): Se retrasa el proyecto por unas semanas hasta volver a mandar a fabricar los PCBs nuevamente.
+	\item Probabilidad de ocurrencia (6): Dada la moderada experiencia del alumno es posible que ocurra.
+\end{itemize}  
+
+Riesgo 2: Mala estimación de la planificación.
+\begin{itemize}
+	\item Severidad (7): El proyecto sufrira varios cambios y retrasos en la ejecuacion.
+	\item Probabilidad de ocurrencia (6): No cuenta con mucha experiencia en planificacion de proyectos IoT.
+\end{itemize}
+
+Riesgo 3: Retraso en la programación del firmware.
+\begin{itemize}
+	\item Severidad (7): 
+	\item Probabilidad de ocurrencia (6): 
+\end{itemize}  
+
+Riesgo 4: Retraso en la fabricación y ensamblaje de los PCBs.
+\begin{itemize}
+	\item Severidad (7): 
+	\item Probabilidad de ocurrencia (6): 
+\end{itemize}
+
+Riesgo 5: Pérdida o daño de los archivos asociados al proyecto.
+\begin{itemize}
+	\item Severidad (7): 
+	\item Probabilidad de ocurrencia (6): 
+\end{itemize}  
+
+
+
+
 \begin{itemize}
 	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
 	Justificar el motivo por el cual se asigna determinado número de severidad (S).
