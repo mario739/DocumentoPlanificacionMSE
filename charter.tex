@@ -20,8 +20,8 @@ codirector, % Uncomment to add a codirector to the title page
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Mg. Ing. Mauricio Barroso Benavides}
 \pertenenciaDirector{FIUBA} 
-\codirector{Título y Nombre del codirector} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
-\pertenenciaCoDirector{FIUBA}
+%\codirector{Título y Nombre del codirector} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
+%\pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Ing. Carlos Alvarado Cruz}
@@ -529,67 +529,29 @@ Riesgo 1: Detección de errores en el esquemático o el ruteo del PCB ya habiend
 
 Riesgo 2: Mala estimación de la planificación.
 \begin{itemize}
-	\item Severidad (7): El proyecto sufrira varios cambios y retrasos en la ejecuacion.
+	\item Severidad (8): El proyecto sufrira varios cambios y retrasos en la ejecucion.
 	\item Probabilidad de ocurrencia (6): No cuenta con mucha experiencia en planificacion de proyectos IoT.
 \end{itemize}
 
 Riesgo 3: Retraso en la programación del firmware.
 \begin{itemize}
-	\item Severidad (7): 
-	\item Probabilidad de ocurrencia (6): 
+	\item Severidad (7): Retrasos en el proyecto debido a que el firmware es una parte fundamental en el momento de la integracion e implementación del prototipo.
+	\item Probabilidad de ocurrencia (5): Falta de conocimiento de la arquitectura del microcontrolador.
 \end{itemize}  
 
 Riesgo 4: Retraso en la fabricación y ensamblaje de los PCBs.
 \begin{itemize}
-	\item Severidad (7): 
-	\item Probabilidad de ocurrencia (6): 
+	\item Severidad (7): Por falta del hardware no se podra probar el firmware sobre el hardware del prototipo.
+	\item Probabilidad de ocurrencia (4): Se mandara a fabricar y ensamblar a una empresa de china. 
 \end{itemize}
 
 Riesgo 5: Pérdida o daño de los archivos asociados al proyecto.
 \begin{itemize}
-	\item Severidad (7): 
-	\item Probabilidad de ocurrencia (6): 
+	\item Severidad (7): Al perder los archivos del proyecto se tendra que volver reiniciar disenos.
+	\item Probabilidad de ocurrencia (3): Se llevara un control de versiones con los documentos del proyecto.
 \end{itemize}  
 
-
-
-
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}  
-
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
-
-Riesgo 2:
-\begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
-
-Riesgo 3:
-\begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
-
-
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+b) Tabla de gestión de riesgos: 
 
 \begin{table}[htpb]
 \centering
@@ -597,40 +559,101 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Detección de errores en el esquemático o el ruteo del PCB ya habiendo fabricado los prototipos&   7&   6&     42&    7&    5&      35\\ \hline
+Mala estimación de la planificación      &   8&   6&     48&    8&    4&      32\\ \hline
+Retraso en la programación del firmware       &   7&   5&     35&    &    &      \\ \hline
+Retraso en la fabricación y ensamblaje de los PCBs       &   7&   4&     28&    &    &      \\ \hline
+Pérdida o daño de los archivos asociados al proyecto      &   7&   3&     21&    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 42
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+Riesgo 1*: Se revisara minuciosamente los esquematicos, el ruteo del PCB, y se buscara ayuda en algun ingeniero que tenga experiencia en desarrollo de circuitos impresos en proyectos de estas caracteristicas.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
+	\item Severidad (7):No cambia.
+	\item Probabilidad de ocurrencia (5): Menor, alcontar con ayuda de profesionales expertos en el tema.
+\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+Riesgo 2*: Se consultara con el director en el momento de realizar la planificación para ajustar los tiempos de las tareas de acuerdo a su experiencia en este tipo de proyectos.
+  \begin{itemize}
+	\item Severidad (8):No cambia.
+	\item Probabilidad de ocurrencia (4): Se reduce el riesgo de hacer una mala planificación.
+\end{itemize}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
+Para cada uno de los requerimiento funcionales, a constitución, se lista su respectiva validacion y verificación. Las mismas llevadas a cabo por el responsable del proeyecto.
+
+\begin{itemize} 
+	\item Req \#1: El firmware debe estar bajo un RTOS.
+	\begin{itemize}
+		\item Verificación: .
+		\item Validación: . 
+	\end{itemize}
+
+	\item Req \#2: Se deberá llevar control de los cambios bajo el sistema de control de versiones Git.
+	\begin{itemize}
+		\item Verificación: Utilizar una consola para mandar comandos git.
+		\item Validación: Mostrar los commits realizados durante el proyecto.  
+	\end{itemize}
+
+	\item Req \#3: El firmware debe poder suscribirse y publicar en tópicos de un broker MQTT.
+	\begin{itemize}
+		\item Verificación: Publicar datos a un topico del borker MQTT.
+		\item Validación: Visualizar los datos en la interfaz grafica en la plataforma IoT. 
+	\end{itemize}
+
+	\item Req \#4: El firmware debe comunicarse con el módulo GSM/GPRS mediante protocolo serial.
+	\begin{itemize}
+		\item Verificación: Mandar comandos AT por puerto serial y esperar la respuesta del modulo.
+		\item Validación: Visualizar las respuesta del  modulo en un monitor serial. 
+	\end{itemize}
+
+	\item Req \#5: Se deben realizar los drivers para los sensores.
+	\begin{itemize}
+		\item Verificación: Hacer un test unitario para cada driver.
+		\item Validación: Mostrar los resultados de covertura en GCOV. 
+	\end{itemize}
+
+	\item Req \#6: El PCB tiene que tener un circuito de acondicionamiento para una entrada RS485.
+	\begin{itemize}
+		\item Verificación:.
+		\item Validación:. 
+	\end{itemize}
+
+	\item Req \#7: Debe contar con una display.
+	\begin{itemize}
+		\item Verificación: Mandar datos al display para visualizarlos.
+		\item Validación: Mostrar lecturas de los sensores en graficas en el display. 
+	\end{itemize}
+
+	\item Req \#8: Debe mostrar los valores de los sensores.
+	\begin{itemize}
+		\item Verificación: Mandar datos leidos de los sensores a un topico por MQTT a la plataforma.
+		\item Validación: Entrar a la plataforma IoT y visualizar los datos. 
+	\end{itemize}
+
+	\item Req \#9: Debe contar con botones para controlar la actuadores.
+	\begin{itemize}
+		\item Verificación: Visualizar los datos recibidos en un monitor serial al momento de presionar un boton en la plataforma IoT.
+		\item Validación: Oprimir un boton en la interfaz y visualizar la activacion de un actuador. 
+	\end{itemize}
+
+	\item Req \#10: Requerimientos de documentación.
+	\begin{itemize}
+		\item Verificación: Verificar que se haya presentado el informe de avance y la memoria tecnica del proyecto.
+		\item Validación: Revisar que se cumplio los requerimientos estipulados en el plan de proyectos. 
+	\end{itemize}
+	
+\end{itemize}
 
 \begin{consigna}{red}
 Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
