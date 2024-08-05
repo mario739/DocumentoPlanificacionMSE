@@ -529,26 +529,26 @@ Riesgo 1: Detección de errores en el esquemático o el ruteo del PCB ya habiend
 
 Riesgo 2: Mala estimación de la planificación.
 \begin{itemize}
-	\item Severidad (8): El proyecto sufrira varios cambios y retrasos en la ejecucion.
-	\item Probabilidad de ocurrencia (6): No cuenta con mucha experiencia en planificacion de proyectos IoT.
+	\item Severidad (8): El proyecto sufrirá varios cambios y retrasos en la ejecución.
+	\item Probabilidad de ocurrencia (6): No cuenta con mucha experiencia en planificación de proyectos IoT.
 \end{itemize}
 
 Riesgo 3: Retraso en la programación del firmware.
 \begin{itemize}
-	\item Severidad (7): Retrasos en el proyecto debido a que el firmware es una parte fundamental en el momento de la integracion e implementación del prototipo.
+	\item Severidad (7): Retrasos en el proyecto debido a que el firmware es una parte fundamental en el momento de la integración e implementación del prototipo.
 	\item Probabilidad de ocurrencia (5): Falta de conocimiento de la arquitectura del microcontrolador.
 \end{itemize}  
 
 Riesgo 4: Retraso en la fabricación y ensamblaje de los PCBs.
 \begin{itemize}
-	\item Severidad (7): Por falta del hardware no se podra probar el firmware sobre el hardware del prototipo.
-	\item Probabilidad de ocurrencia (4): Se mandara a fabricar y ensamblar a una empresa de china. 
+	\item Severidad (7): Por falta del hardware no se podrá probar el firmware sobre el hardware del prototipo.
+	\item Probabilidad de ocurrencia (4): Se mandará a fabricar y ensamblar a una empresa china. 
 \end{itemize}
 
 Riesgo 5: Pérdida o daño de los archivos asociados al proyecto.
 \begin{itemize}
-	\item Severidad (7): Al perder los archivos del proyecto se tendra que volver reiniciar disenos.
-	\item Probabilidad de ocurrencia (3): Se llevara un control de versiones con los documentos del proyecto.
+	\item Severidad (7): Al perder los archivos del proyecto se tendrá que volver reiniciar diseños.
+	\item Probabilidad de ocurrencia (3): Se llevará un control de versiones con los documentos del proyecto.
 \end{itemize}  
 
 b) Tabla de gestión de riesgos: 
@@ -575,13 +575,13 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1*: Se revisara minuciosamente los esquematicos, el ruteo del PCB, y se buscara ayuda en algun ingeniero que tenga experiencia en desarrollo de circuitos impresos en proyectos de estas caracteristicas.
+Riesgo 1*:  Se revisará minuciosamente los esquemáticos, el ruteo del PCB, y se buscará ayuda en algún ingeniero que tenga experiencia en desarrollo de circuitos impresos en proyectos de estas características.
   \begin{itemize}
 	\item Severidad (7):No cambia.
-	\item Probabilidad de ocurrencia (5): Menor, alcontar con ayuda de profesionales expertos en el tema.
+	\item Probabilidad de ocurrencia (5): Será menor al contar con ayuda de profesionales expertos en el tema.
 \end{itemize}
 
-Riesgo 2*: Se consultara con el director en el momento de realizar la planificación para ajustar los tiempos de las tareas de acuerdo a su experiencia en este tipo de proyectos.
+Riesgo 2*: Se consultará con el director en el momento de realizar la planificación para ajustar los tiempos de las tareas de acuerdo a su experiencia en este tipo de proyectos.
   \begin{itemize}
 	\item Severidad (8):No cambia.
 	\item Probabilidad de ocurrencia (4): Se reduce el riesgo de hacer una mala planificación.
@@ -595,86 +595,64 @@ Para cada uno de los requerimiento funcionales, a constitución, se lista su res
 \begin{itemize} 
 	\item Req \#1: El firmware debe estar bajo un RTOS.
 	\begin{itemize}
-		\item Verificación: .
-		\item Validación: . 
+		\item Verificación: Envio de datos por colas entre tareas.
+		\item Validación: Mostrar el intercambio de datos entre tareas por monitor serial. 
 	\end{itemize}
 
 	\item Req \#2: Se deberá llevar control de los cambios bajo el sistema de control de versiones Git.
 	\begin{itemize}
-		\item Verificación: Utilizar una consola para mandar comandos git.
-		\item Validación: Mostrar los commits realizados durante el proyecto.  
+		\item Verificación: Utilizar una consola de comandos para mandar comandos git en los archivos del proyecto.
+		\item Validación: Mostrar los todos commits realizados durante el proyecto.  
 	\end{itemize}
 
 	\item Req \#3: El firmware debe poder suscribirse y publicar en tópicos de un broker MQTT.
 	\begin{itemize}
-		\item Verificación: Publicar datos a un topico del borker MQTT.
-		\item Validación: Visualizar los datos en la interfaz grafica en la plataforma IoT. 
+		\item Verificación: Publicar datos a un tópico del broker MQTT.
+		\item Validación: Visualizar los datos en la interfaz gráfica en la plataforma IoT. 
 	\end{itemize}
 
 	\item Req \#4: El firmware debe comunicarse con el módulo GSM/GPRS mediante protocolo serial.
 	\begin{itemize}
 		\item Verificación: Mandar comandos AT por puerto serial y esperar la respuesta del modulo.
-		\item Validación: Visualizar las respuesta del  modulo en un monitor serial. 
+		\item Validación: Visualizar las respuesta del  módulo en un monitor serial.  
 	\end{itemize}
 
 	\item Req \#5: Se deben realizar los drivers para los sensores.
 	\begin{itemize}
 		\item Verificación: Hacer un test unitario para cada driver.
-		\item Validación: Mostrar los resultados de covertura en GCOV. 
+		\item Validación: Mostrar los resultados de cobertura en GCOV. 
 	\end{itemize}
 
 	\item Req \#6: El PCB tiene que tener un circuito de acondicionamiento para una entrada RS485.
 	\begin{itemize}
-		\item Verificación:.
-		\item Validación:. 
+		\item Verificación: Hacer la lectura del sensor conectado por RS485.
+		\item Validación: Inspección por parte de cliente del circuito en el PCB.  
 	\end{itemize}
 
 	\item Req \#7: Debe contar con una display.
 	\begin{itemize}
 		\item Verificación: Mandar datos al display para visualizarlos.
-		\item Validación: Mostrar lecturas de los sensores en graficas en el display. 
+		\item Validación: Mostrar lecturas de los sensores en gráficas en el display.  
 	\end{itemize}
 
 	\item Req \#8: Debe mostrar los valores de los sensores.
 	\begin{itemize}
-		\item Verificación: Mandar datos leidos de los sensores a un topico por MQTT a la plataforma.
+		\item Verificación: Mandar datos leídos de los sensores a un tópico por MQTT a la plataforma.
 		\item Validación: Entrar a la plataforma IoT y visualizar los datos. 
 	\end{itemize}
 
 	\item Req \#9: Debe contar con botones para controlar la actuadores.
 	\begin{itemize}
-		\item Verificación: Visualizar los datos recibidos en un monitor serial al momento de presionar un boton en la plataforma IoT.
-		\item Validación: Oprimir un boton en la interfaz y visualizar la activacion de un actuador. 
-	\end{itemize}
+		\item Verificación: Visualizar los datos recibidos en un monitor serial al momento de presionar un botón en la plataforma IoT.
+		\item Validación: Oprimir un botón en la interfaz y visualizar la activación de un actuador. 
 
 	\item Req \#10: Requerimientos de documentación.
 	\begin{itemize}
-		\item Verificación: Verificar que se haya presentado el informe de avance y la memoria tecnica del proyecto.
+		\item Verificación: Verificar que se haya presentado el informe de avance y la memoria técnica del proyecto.
 		\item Validación: Revisar que se cumplio los requerimientos estipulados en el plan de proyectos. 
 	\end{itemize}
-	
 \end{itemize}
-
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
-
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
-
-\begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
 \end{itemize}
-
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
