@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="" company="" manager="" phase="" project-start="20240724T000000Z" mrproject-version="2" calendar="1">
+<project name="" company="" manager="" phase="" project-start="20240622T000000Z" mrproject-version="2" calendar="1">
   <properties/>
   <phases/>
   <calendars>
@@ -12,8 +12,7 @@
       <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
       <overridden-day-types>
         <overridden-day-type id="0">
-          <interval start="0800" end="1200"/>
-          <interval start="1300" end="1700"/>
+          <interval start="1900" end="2200"/>
         </overridden-day-type>
       </overridden-day-types>
       <days>
@@ -31,105 +30,100 @@
     </calendar>
   </calendars>
   <tasks>
-    <task id="1" name="Documentacion y analisis preliminar" note="" work="309600" start="20240724T000000Z" end="20240802T120000Z" work-start="20240724T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="2" name="Escribir la planificaci&#xF3;n del proyecto" note="" work="216000" start="20240724T000000Z" end="20240802T120000Z" work-start="20240724T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="3" name="Especificaci&#xF3;n de requisitos del firmware" note="" work="57600" start="20240724T000000Z" end="20240725T170000Z" work-start="20240724T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="4" name="Definici&#xF3;n de las pruebas de aceptaci&#xF3;n" note="" work="36000" start="20240724T000000Z" end="20240725T100000Z" work-start="20240724T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="1" name="Documentacion y analisis preliminar" note="" work="216000" start="20240622T000000Z" end="20240711T200000Z" work-start="20240624T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Escribir la planificaci&#xF3;n del proyecto" note="" work="144000" start="20240622T000000Z" end="20240711T200000Z" work-start="20240624T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Especificaci&#xF3;n de requisitos del firmware" note="" work="36000" start="20240622T000000Z" end="20240627T200000Z" work-start="20240624T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="4" name="Definici&#xF3;n de las pruebas de aceptaci&#xF3;n" note="" work="36000" start="20240622T000000Z" end="20240627T200000Z" work-start="20240624T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="5" name="B&#xFA;squeda de material bibliogr&#xE1;fico" note="" work="136800" start="20240802T120000Z" end="20240808T100000Z" work-start="20240802T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="5" name="B&#xFA;squeda de material bibliogr&#xE1;fico" note="" work="162000" start="20240711T200000Z" end="20240725T200000Z" work-start="20240711T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="2" type="FS"/>
       </predecessors>
-      <task id="6" name="Buscar hojas de datos de todos los componentes" note="" work="28800" start="20240802T120000Z" end="20240805T120000Z" work-start="20240802T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="7" name="Estudiar el funcionamiento de cada uno de los componentes" note="" work="54000" start="20240806T110000Z" end="20240808T100000Z" work-start="20240806T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="6" name="Buscar hojas de datos de todos los componentes" note="" work="54000" start="20240711T200000Z" end="20240718T200000Z" work-start="20240711T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="7" name="Estudiar el funcionamiento de cada uno de los componentes" note="" work="54000" start="20240718T200000Z" end="20240725T200000Z" work-start="20240718T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="8" type="FS"/>
         </predecessors>
       </task>
-      <task id="8" name="Investigar sobre dispositivos con funciones similares " note="" work="54000" start="20240802T120000Z" end="20240806T110000Z" work-start="20240802T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="8" name="Investigar sobre dispositivos con funciones similares " note="" work="54000" start="20240711T200000Z" end="20240718T200000Z" work-start="20240711T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="9" name="Dise&#xF1;o del hardware del sistema" note="" work="576000" start="20240808T100000Z" end="20240905T100000Z" work-start="20240808T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="9" name="Dise&#xF1;o del hardware del sistema" note="" work="558000" start="20240725T200000Z" end="20241004T220000Z" work-start="20240725T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="7" type="FS"/>
       </predecessors>
-      <task id="10" name="Selecci&#xF3;n de componentes" note="" work="54000" start="20240808T100000Z" end="20240812T090000Z" work-start="20240808T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="11" name="Dise&#xF1;o del esquem&#xE1;tico" note="" work="216000" start="20240812T090000Z" end="20240821T140000Z" work-start="20240812T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="10" name="Selecci&#xF3;n de componentes" note="" work="54000" start="20240725T200000Z" end="20240801T200000Z" work-start="20240725T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="11" name="Dise&#xF1;o del esquem&#xE1;tico" note="" work="216000" start="20240801T200000Z" end="20240829T200000Z" work-start="20240801T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="10" type="FS"/>
         </predecessors>
       </task>
-      <task id="12" name="Dise&#xF1;o de los s&#xED;mbolos" note="" work="72000" start="20240821T140000Z" end="20240826T090000Z" work-start="20240821T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="12" name="Dise&#xF1;o de los s&#xED;mbolos" note="" work="72000" start="20240829T200000Z" end="20240906T220000Z" work-start="20240829T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="11" type="FS"/>
         </predecessors>
       </task>
-      <task id="13" name="Dise&#xF1;o del PCB" note="" work="216000" start="20240826T090000Z" end="20240904T140000Z" work-start="20240826T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="13" name="Dise&#xF1;o del PCB" note="" work="216000" start="20240906T220000Z" end="20241004T220000Z" work-start="20240909T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="12" type="FS"/>
         </predecessors>
       </task>
-      <task id="14" name="Dise&#xF1;o de los componentes en 3D" note="" work="18000" start="20240904T140000Z" end="20240905T100000Z" work-start="20240904T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    </task>
+    <task id="14" name="Desarrollo del firmware" note="" work="630000" start="20241004T220000Z" end="20241226T200000Z" work-start="20241007T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="13" type="FS"/>
+      </predecessors>
+      <task id="15" name="Dise&#xF1;o de la arquitectura del firmware" note="" work="90000" start="20241004T220000Z" end="20241017T200000Z" work-start="20241007T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="16" name="Desarrollo de los drivers del firmware" note="" work="252000" start="20241017T200000Z" end="20241119T210000Z" work-start="20241017T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
-          <predecessor id="1" predecessor-id="13" type="FS"/>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
         </predecessors>
       </task>
-    </task>
-    <task id="15" name="Desarrollo del firmware" note="" work="630000" start="20240905T100000Z" end="20241007T090000Z" work-start="20240905T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="14" type="FS"/>
-      </predecessors>
-      <task id="16" name="Dise&#xF1;o de la arquitectura del firmware" note="" work="90000" start="20240905T100000Z" end="20240910T110000Z" work-start="20240905T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="17" name="Desarrollo de los drivers del firmware" note="" work="252000" start="20240910T110000Z" end="20240923T090000Z" work-start="20240910T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="17" name="Desarrollar el m&#xF3;dulo de la aplicaci&#xF3;n" note="" work="288000" start="20241119T210000Z" end="20241226T200000Z" work-start="20241119T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="16" type="FS"/>
         </predecessors>
       </task>
-      <task id="18" name="Desarrollar el m&#xF3;dulo de la aplicaci&#xF3;n" note="" work="288000" start="20240923T090000Z" end="20241007T090000Z" work-start="20240923T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    </task>
+    <task id="18" name="Configuraci&#xF3;n de la plataforma IoT" note="" work="252000" start="20241226T200000Z" end="20250128T210000Z" work-start="20241226T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="17" type="FS"/>
+      </predecessors>
+      <task id="19" name="Dise&#xF1;o de la interfaz gr&#xE1;fica en la plataforma IoT" note="" work="144000" start="20241226T200000Z" end="20250114T210000Z" work-start="20241226T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="20" name="Configuraci&#xF3;n de la base de datos, alarmas y reglas" note="" work="108000" start="20250114T210000Z" end="20250128T210000Z" work-start="20250114T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
-          <predecessor id="1" predecessor-id="17" type="FS"/>
+          <predecessor id="1" predecessor-id="19" type="FS"/>
         </predecessors>
       </task>
     </task>
-    <task id="19" name="Configuraci&#xF3;n de la interfaz gr&#xE1;fica" note="" work="252000" start="20241007T090000Z" end="20241017T160000Z" work-start="20241007T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="21" name="Testing" note="" work="108000" start="20250128T210000Z" end="20250211T210000Z" work-start="20250128T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
-        <predecessor id="1" predecessor-id="18" type="FS"/>
+        <predecessor id="1" predecessor-id="20" type="FS"/>
       </predecessors>
-      <task id="20" name="Dise&#xF1;o de la interfaz gr&#xE1;fica en la plataforma IoT" note="" work="144000" start="20241007T090000Z" end="20241014T090000Z" work-start="20241007T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="21" name="Configuraci&#xF3;n de la base de datos, alarmas y reglas" note="" work="108000" start="20241014T090000Z" end="20241017T160000Z" work-start="20241014T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="22" name="Testeo el&#xE9;ctrico del PCB" note="" work="36000" start="20250128T210000Z" end="20250131T220000Z" work-start="20250128T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="23" name="Testeo del firmware" note="" work="36000" start="20250131T220000Z" end="20250206T200000Z" work-start="20250203T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
-          <predecessor id="1" predecessor-id="20" type="FS"/>
+          <predecessor id="1" predecessor-id="22" type="FS"/>
         </predecessors>
       </task>
-    </task>
-    <task id="22" name="Testing" note="" work="108000" start="20241017T160000Z" end="20241023T140000Z" work-start="20241017T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="21" type="FS"/>
-      </predecessors>
-      <task id="23" name="Testeo el&#xE9;ctrico del PCB" note="" work="36000" start="20241017T160000Z" end="20241021T090000Z" work-start="20241017T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="24" name="Testeo del firmware" note="" work="36000" start="20241021T090000Z" end="20241022T110000Z" work-start="20241021T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="24" name="Depuraci&#xF3;n del firmware" note="" work="36000" start="20250206T200000Z" end="20250211T210000Z" work-start="20250206T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="23" type="FS"/>
         </predecessors>
       </task>
-      <task id="25" name="Depuraci&#xF3;n del firmware" note="" work="36000" start="20241022T110000Z" end="20241023T140000Z" work-start="20241022T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    </task>
+    <task id="25" name="Cierre del proyecto" note="" work="432000" start="20250211T210000Z" end="20250408T210000Z" work-start="20250211T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="24" type="FS"/>
+      </predecessors>
+      <task id="26" name="Informes de avance del proyecto" note="" work="72000" start="20250211T210000Z" end="20250220T200000Z" work-start="20250211T210000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="27" name="Elaboraci&#xF3;n de la memoria t&#xE9;cnica del trabajo final" note="" work="288000" start="20250220T200000Z" end="20250328T220000Z" work-start="20250220T200000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
-          <predecessor id="1" predecessor-id="24" type="FS"/>
+          <predecessor id="1" predecessor-id="26" type="FS"/>
         </predecessors>
       </task>
-    </task>
-    <task id="26" name="Cierre del proyecto" note="" work="432000" start="20241023T140000Z" end="20241113T140000Z" work-start="20241023T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <predecessors>
-        <predecessor id="1" predecessor-id="25" type="FS"/>
-      </predecessors>
-      <task id="27" name="Informes de avance del proyecto" note="" work="72000" start="20241023T140000Z" end="20241028T090000Z" work-start="20241023T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="28" name="Elaboraci&#xF3;n de la memoria t&#xE9;cnica del trabajo final" note="" work="288000" start="20241028T090000Z" end="20241111T090000Z" work-start="20241028T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="28" name="Presentaci&#xF3;n final del proyecto" note="" work="72000" start="20250328T220000Z" end="20250408T210000Z" work-start="20250331T190000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="27" type="FS"/>
-        </predecessors>
-      </task>
-      <task id="29" name="Presentaci&#xF3;n final del proyecto" note="" work="72000" start="20241111T090000Z" end="20241113T140000Z" work-start="20241111T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <predecessors>
-          <predecessor id="1" predecessor-id="28" type="FS"/>
         </predecessors>
       </task>
     </task>
